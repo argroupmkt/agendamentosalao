@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glamour Studio | Agendamento Rápido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container-header">
+            <h1 class="logo">Glamour Studio</h1>
+            <a href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank" class="contato-rapido">
+                <i class="fab fa-whatsapp"></i> (11) 99999-9999
+            </a>
+        </div>
+    </header>
+
+    <main class="container-agendamento">
+        
+        <h2 class="titulo-principal">✨ Agende seu Momento em 4 Passos ✨</h2>
+        <p class="subtitulo-principal">Selecione as opções e envie seu pré-agendamento para confirmação via WhatsApp.</p>
+
+        <form id="form-agendamento">
+            
+            <section class="passo" id="passo-servico">
+                <h3>1. Escolha seu Serviço de Luxo</h3>
+                <div class="lista-servicos" id="lista-servicos">
+                    </div>
+                <div class="resumo-selecao">
+                    <p>Duração Estimada: <span id="resumo-duracao">0</span> min</p>
+                    <p>Valor Total Estimado: <span id="resumo-preco">R$ 0,00</span></p>
+                </div>
+            </section>
+
+            <section class="passo" id="passo-profissional">
+                <h3>2. Com qual Profissional?</h3>
+                <div class="lista-profissionais" id="lista-profissionais">
+                    </div>
+            </section>
+            
+            <section class="passo" id="passo-horario">
+                <h3>3. Selecione a Data e Horário Preferidos</h3>
+                <div class="input-grupo">
+                    <label for="data-agendamento">Data:</label>
+                    <input type="date" id="data-agendamento" required>
+                </div>
+
+                <div class="input-grupo">
+                    <label for="horario-agendamento">Horário (Simulação de Horários Livres):</label>
+                    <div class="lista-horarios" id="lista-horarios">
+                        <label class="chip-horario"><input type="radio" name="horario" value="09:00" required><span>09:00</span></label>
+                        <label class="chip-horario"><input type="radio" name="horario" value="10:30"><span>10:30</span></label>
+                        <label class="chip-horario"><input type="radio" name="horario" value="14:00"><span>14:00</span></label>
+                        <label class="chip-horario"><input type="radio" name="horario" value="16:00"><span>16:00</span></label>
+                        <label class="chip-horario"><input type="radio" name="horario" value="17:30"><span>17:30</span></label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="passo" id="passo-dados">
+                <h3>4. Seus Dados para Contato no WhatsApp</h3>
+                <input type="text" id="nome-cliente" placeholder="Seu Nome Completo" required>
+                <input type="tel" id="telefone-cliente" placeholder="Seu WhatsApp (Ex: 11999999999)" required pattern="[0-9]{11}" title="Por favor, digite apenas números com DDD (11 dígitos).">
+            </section>
+
+            <button type="submit" class="btn-whatsapp-final">
+                <i class="fab fa-whatsapp"></i> Enviar Pré-Agendamento para Confirmação
+            </button>
+
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <p>📍 Av. da Beleza, 123 - Centro | 🕐 Seg a Sáb: 9h às 19h</p>
+        <p>© 2025 Glamour Studio. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
